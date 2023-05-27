@@ -22,7 +22,7 @@ export default function Form({ screener, currentIndex, recordResponse }) {
 
   return (
     <div className="flex flex-col justify-center items-center gap-y-5">
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <fieldset>
           <legend>{sections.title}</legend>
           <h3>{sections.questions[currentIndex].title}</h3>
@@ -37,9 +37,7 @@ export default function Form({ screener, currentIndex, recordResponse }) {
               />
             ))}
           </div>
-          <button type="submit" onClick={(e) => handleSubmit(e)}>
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </fieldset>
       </form>
     </div>
