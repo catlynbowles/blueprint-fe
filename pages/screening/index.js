@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Form from "@/app/components/Form";
+import Submit from "../submit";
 
 export default function Screener() {
   const [screener, setScreener] = useState(null);
@@ -20,12 +21,17 @@ export default function Screener() {
 
   return (
     <div>
-      {screener && (
-        <Form
-          screener={screener}
-          currentIndex={currentIndex}
-          recordResponse={recordResponse}
-        />
+      {screener &&
+      currentIndex === screener.content.sections[0].questions.length ? (
+        <Submit completedResponses={completedResponses}/>
+      ) : (
+        screener && (
+          <Form
+            screener={screener}
+            currentIndex={currentIndex}
+            recordResponse={recordResponse}
+          />
+        )
       )}
     </div>
   );
