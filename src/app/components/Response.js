@@ -1,11 +1,10 @@
 import React from "react";
 
-export default function Response({ value, title }) {
-  console.log(value, title);
+export default function Response({ value, title, setResponseValue, responseValue }) {
   return (
     <div className="flex gap-3">
-      <input type="radio" value={value} id={title} />
-      <label for={title}>{title}</label>
+      <input type="radio" value={value} id={title} name="response" checked={responseValue === value} onChange={() => setResponseValue(value)} required/>
+      <label>{title}</label>
     </div>
   );
 }

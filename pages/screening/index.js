@@ -4,11 +4,12 @@ import Form from "@/app/components/Form";
 export default function Screener() {
   const [screener, setScreener] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [completedResponses, setCompletedResponses] = useState([])
 
-  const submitQuestion = (e) => {
-    e.preventDefault();
+  const recordResponse = (answer) => {
     setCurrentIndex(currentIndex + 1);
-    console.log(currentIndex, 'submit!')
+    completedResponses.push(answer)
+    console.log(completedResponses)
   };
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Screener() {
         <Form
           screener={screener}
           currentIndex={currentIndex}
-          submitQuestion={submitQuestion}
+          recordResponse={recordResponse}
         />
       )}
     </div>
