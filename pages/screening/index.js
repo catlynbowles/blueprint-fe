@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
-import Response from "@/app/components/Response";
+import Form from "@/app/components/Form";
 
 export default function Screener() {
   const [screener, setScreener] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const submitQuestion = (e) => {
+    e.preventDefault();
+    setCurrentIndex(currentIndex + 1);
+    console.log(currentIndex, 'submit!')
+  };
 
   useEffect(() => {
     fetch("http://localhost:2222/screener")
@@ -13,14 +20,11 @@ export default function Screener() {
   return (
     <div>
       {screener && (
-        <div className="flex flex-col justify-center items-center">
-          <h3>{screener.content.sections[0].title}</h3>
-          <div>
-            {screener.content.sections[0].answers.map((answer) => (
-              <Response title={answer.title} value={answer.value} />
-            ))}
-          </div>
-        </div>
+        <Form
+          screener={screener}
+          currentIndex={currentIndex}
+          submitQuestion={submitQuestion}
+        />
       )}
     </div>
   );
