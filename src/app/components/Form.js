@@ -37,7 +37,6 @@ export default function Form({ screener, currentIndex, recordResponse }) {
               />
             ))}
           </div>
-          <button type="submit">Submit</button>
         </fieldset>
       </form>
     </div>

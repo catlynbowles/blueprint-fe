@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 
-export default function Submit({completedResponses}) {
+export default function Submit({ completedResponses }) {
   useEffect(() => {
     const finalAnswers = {
-      answers: completedResponses
-    }
-    console.log(finalAnswers)
-    fetch("http://localhost:2222/post", {
+      answers: completedResponses,
+    };
+    console.log(finalAnswers);
+    fetch("https://blueprint-api.vercel.app/post", {
       method: "POST",
-  //     // headers: {
-  //     //   Accept: "application/json",
-  //     //   "Content-Type": "application/json",
-  //     // },
+      //     // headers: {
+      //     //   Accept: "application/json",
+      //     //   "Content-Type": "application/json",
+      //     // },
       body: JSON.stringify(finalAnswers),
       headers: { "Content-Type": "application/json" },
     })
