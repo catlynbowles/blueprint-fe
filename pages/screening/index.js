@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Form from "@/app/components/Form";
-import Submit from "../submit";
+import Submit from "@/app/components/Submit";
 
 export default function Screener() {
   const [screener, setScreener] = useState(null);
