@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Response from "./Response";
+import ProgressBar from "./ProgressBar";
 
 export default function Form({ screener, currentIndex, recordResponse }) {
   const [responseValue, setResponseValue] = useState(null);
@@ -39,6 +40,7 @@ export default function Form({ screener, currentIndex, recordResponse }) {
           </div>
         </fieldset>
       </form>
+      <ProgressBar currentIndex={currentIndex}/>
     </div>
   );
 }
