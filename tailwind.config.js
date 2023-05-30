@@ -15,8 +15,13 @@ module.exports = {
       blue: "#0F084B",
       "baby-blue": "#26408B",
       "off-white": "#F5F5F5",
+      indigo: "#2D54E8",
+      black: "#091235",
+      gray: "#D3D3D3",
+      magenta: "#FF00FF",
     },
     fontFamily: {
+      // tofino personal sans-serif, archivo blue rounded white text, mustard / coral
       lato: ["Lato", "sans-serif"],
     },
   },

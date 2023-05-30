@@ -6,14 +6,14 @@ export default function ProgressBar({ currentIndex }) {
   return (
     <div className="p-5">
       <div
-        className=" bg-dark-blue rounded h-6 mt-5 w-full z-20"
+        className=" bg-gray h-6 mt-5 w-full z-20 rounded-full"
         role="progressbar"
         aria-valuenow={percentageComplete}
         aria-valuemin="0"
         aria-valuemax="100"
       >
         <div
-          className="bg-sky-blue rounded h-6 text-center text-white text-sm transition-all duration-700"
+          className="bg-magenta rounded-full h-6 text-center text-white text-sm transition-all duration-700"
           style={{ width: `${percentageComplete}%` }}
           x-text={`${percentageComplete}%`}
         ></div>

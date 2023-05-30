@@ -9,6 +9,6 @@
   }
   html,
   body {
-    @apply h-full text-off-white font-lato bg-dark-blue;
+    @apply h-full text-black font-lato bg-indigo;
   }
 }

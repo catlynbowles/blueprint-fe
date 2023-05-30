@@ -21,7 +21,7 @@ export default function Screener() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center justify-center min-h-max">
       {screener &&
       currentIndex === screener.content.sections[0].questions.length ? (
         <DialogBox>
