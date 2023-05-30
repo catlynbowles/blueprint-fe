@@ -2,7 +2,7 @@ import React from "react";
 
 export default function DialogBox({ children }) {
   return (
-    <div className="bg-blue outline outline-eggshell h-96 w-[50%] flex justify-center items-center rounded-md">
+    <div className="bg-blue outline outline-eggshell aspect-[3/2] w-[50%] flex rounded-md p-5 m-5 ">
       {children}
     </div>
   );
