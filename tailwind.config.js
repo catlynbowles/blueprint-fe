@@ -7,12 +7,19 @@ module.exports = {
     "./styles/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      "dark-blue": "#0D0221",
+      "off-white": "#F5F5F5",
+      indigo: "#2D54E8",
+      black: "#091235",
+      gray: "#D3D3D3",
+      magenta: "#FF00FF",
+    },
+    fontFamily: {
+      lato: ["Lato", "sans-serif"],
+    },
+    animation: {
+      "fade-in": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1)",
     },
   },
   plugins: [],

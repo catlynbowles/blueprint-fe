@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Form from "@/app/components/Form";
 import Submit from "@/app/components/Submit";
+import DialogBox from "@/app/components/DialogBox";
 
 export default function Screener() {
   const [screener, setScreener] = useState(null);
@@ -10,7 +11,6 @@ export default function Screener() {
   const recordResponse = (answer) => {
     setCurrentIndex(currentIndex + 1);
     completedResponses.push(answer);
-    console.log(completedResponses);
   };
 
   useEffect(() => {
@@ -20,17 +20,21 @@ export default function Screener() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col items-center text-center justify-center min-h-max">
       {screener &&
       currentIndex === screener.content.sections[0].questions.length ? (
-        <Submit completedResponses={completedResponses} />
+        <DialogBox>
+          <Submit completedResponses={completedResponses} />
+        </DialogBox>
       ) : (
         screener && (
-          <Form
-            screener={screener}
-            currentIndex={currentIndex}
-            recordResponse={recordResponse}
-          />
+          <DialogBox>
+            <Form
+              screener={screener}
+              currentIndex={currentIndex}
+              recordResponse={recordResponse}
+            />
+          </DialogBox>
         )
       )}
     </div>
