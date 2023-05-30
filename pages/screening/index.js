@@ -11,7 +11,6 @@ export default function Screener() {
   const recordResponse = (answer) => {
     setCurrentIndex(currentIndex + 1);
     completedResponses.push(answer);
-    console.log(completedResponses);
   };
 
   useEffect(() => {

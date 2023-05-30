@@ -18,7 +18,7 @@ export default function Home() {
             notified upon completion of the survey."
           />
           <Link href="screening">
-            <Button children={"Get Started"} />
+            <Button>Get Started</Button>
           </Link>
         </div>
       </DialogBox>

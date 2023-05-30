@@ -8,18 +8,19 @@ export default function Submit({ completedResponses }) {
     const finalAnswers = {
       answers: completedResponses,
     };
+    console.log("Completed Survey:", completedResponses)
     fetch("https://blueprint-api.vercel.app/post", {
       method: "POST",
-      //     // headers: {
-      //     //   Accept: "application/json",
-      //     //   "Content-Type": "application/json",
-      //     // },
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
       body: JSON.stringify(finalAnswers),
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => response.json())
       .then((response) => console.log("Results from API:", response));
-  }, []);
+  }, [completedResponses]);
   return (
     <div className="flex flex-col gap-5 justify-center items-center">
       <InformationalLayout
@@ -28,7 +29,7 @@ export default function Submit({ completedResponses }) {
           in a few weeks ! (For demo purposes, please look in the console for the proposed level two assesments from the API)"
       />
       <Link href="/">
-        <Button children="Return Home" />
+        <Button>Return Home</Button>
       </Link>
     </div>
   );
