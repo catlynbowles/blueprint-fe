@@ -9,11 +9,6 @@ module.exports = {
   theme: {
     colors: {
       "dark-blue": "#0D0221",
-      eggshell: "#CAF0F8",
-      "sky-blue": "#A6CFD5",
-      "pastel-green": "#C2E7D9",
-      blue: "#0F084B",
-      "baby-blue": "#26408B",
       "off-white": "#F5F5F5",
       indigo: "#2D54E8",
       black: "#091235",
@@ -21,8 +16,10 @@ module.exports = {
       magenta: "#FF00FF",
     },
     fontFamily: {
-      // tofino personal sans-serif, archivo blue rounded white text, mustard / coral
       lato: ["Lato", "sans-serif"],
+    },
+    animation: {
+      "fade-in": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1)",
     },
   },
   plugins: [],

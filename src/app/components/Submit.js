@@ -1,11 +1,13 @@
 import { useEffect } from "react";
+import InformationalLayout from "./InformationalLayout";
+import Button from "./Button";
+import Link from "next/link";
 
 export default function Submit({ completedResponses }) {
   useEffect(() => {
     const finalAnswers = {
       answers: completedResponses,
     };
-    console.log(finalAnswers);
     fetch("https://blueprint-api.vercel.app/post", {
       method: "POST",
       //     // headers: {
@@ -16,12 +18,18 @@ export default function Submit({ completedResponses }) {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => response.json())
-      .then((response) => console.log(response));
+      .then((response) => console.log("Results from API:", response));
   }, []);
   return (
-    <div>
-      Your responses are being recorded and will be shared with your provider so
-      that they can help provide you with the most effective care.
+    <div className="flex flex-col gap-5 justify-center items-center">
+      <InformationalLayout
+        header="Thank you for completing Blueprint’s Diagnostic Screening"
+        text="No further action is required from you at this time. We’ll see you again
+          in a few weeks ! (For demo purposes, please look in the console for the proposed level two assesments from the API)"
+      />
+      <Link href="/">
+        <Button children="Return Home" />
+      </Link>
     </div>
   );
 }
