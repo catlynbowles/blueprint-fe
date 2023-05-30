@@ -1,6 +1,6 @@
 # 👣 Blueprint Diagnostic Screener 🔵
 
-- [Deployed Link](blueprint-fe.vercel.app)
+- [Deployed Link](https://blueprint-fe.vercel.app/)
 
 ## Table of Contents
 - [Introduction](#introduction)
