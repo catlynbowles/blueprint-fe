@@ -5,13 +5,11 @@
 
 @layer components {
   #__next {
-    @apply min-h-screen bg-dark-blue overflow-auto;
+    @apply min-h-screen overflow-auto;
   }
   html,
   body {
-    @apply h-full;
-    @apply text-off-white;
-    @apply font-lato;
+    @apply h-full text-off-white font-lato bg-dark-blue;
   }
   html {
     @apply overflow-hidden;
