@@ -7,12 +7,15 @@ module.exports = {
     "./styles/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      "dark-blue": "#0F084B",
+      eggshell: "#A6CFD5",
+      "pastel-green": "#C2E7D9",
+      "baby-blue": "#26408B",
+      "off-white": "#F5F5F5",
+    },
+    fontFamily: {
+      lato: ["Lato", "sans-serif"],
     },
   },
   plugins: [],
