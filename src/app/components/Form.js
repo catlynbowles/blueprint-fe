@@ -14,12 +14,9 @@ export default function Form({ screener, currentIndex, recordResponse }) {
       question_id: sections.questions[currentIndex].question_id,
       value: responseValue,
     };
+    console.log(responseValue, 'val')
+    console.log(answer, "answer");
     recordResponse(answer);
-    clearSelection();
-  };
-
-  const clearSelection = () => {
-    setResponseValue(null);
   };
 
   return (

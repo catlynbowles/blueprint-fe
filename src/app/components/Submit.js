@@ -30,7 +30,7 @@ export default function Submit({ completedResponses }) {
   }, [completedResponses]);
 
   const clearResponses = () => {
-    completedResponses = null;
+    completedResponses = [];
   };
 
   return (
