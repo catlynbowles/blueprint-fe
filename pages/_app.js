@@ -1,11 +1,21 @@
 import React from "react";
-import '../styles/globals.css'
+import "../styles/globals.css";
 import Navbar from "@/app/components/Navbar";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-    <Navbar />
+      <Head>
+        <title>Blueprint Diagnostic Screening</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Take home challenge for Blueprint Mental Health Services"
+        />
+      </Head>
+      <Navbar />
       <Component {...pageProps} />
     </>
   );
