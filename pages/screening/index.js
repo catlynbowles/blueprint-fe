@@ -27,7 +27,9 @@ export default function Screener() {
   return (
     <div className="flex flex-col items-center text-center justify-center min-h-max">
       {error ? (
-        <p className="text-off-white text-2xl">There's been a problem loading the survey. Please try later.</p>
+        <p className="text-off-white text-2xl">
+          There was a problem loading the survey. Please try later.
+        </p>
       ) : screener &&
         currentIndex === screener.content.sections[0].questions.length ? (
         <DialogBox>
