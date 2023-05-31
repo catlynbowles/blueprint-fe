@@ -7,6 +7,7 @@ export default function Screener() {
   const [screener, setScreener] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [completedResponses, setCompletedResponses] = useState([]);
+  const [error, setError] = useState(null);
 
   const recordResponse = (answer) => {
     setCurrentIndex(currentIndex + 1);
@@ -16,13 +17,21 @@ export default function Screener() {
   useEffect(() => {
     fetch("https://blueprint-api.vercel.app/screener")
       .then((resp) => resp.json())
-      .then((data) => setScreener(data));
+      .then((data) => setScreener(data))
+      .catch((err) => {
+        console.log(err);
+        setError(err);
+      });
   }, []);
 
   return (
     <div className="flex flex-col items-center text-center justify-center min-h-max">
-      {screener &&
-      currentIndex === screener.content.sections[0].questions.length ? (
+      {error ? (
+        <p className="text-off-white text-2xl">
+          There was a problem loading the survey. Please try later.
+        </p>
+      ) : screener &&
+        currentIndex === screener.content.sections[0].questions.length ? (
         <DialogBox>
           <Submit completedResponses={completedResponses} />
         </DialogBox>

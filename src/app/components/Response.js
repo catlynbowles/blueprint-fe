@@ -9,7 +9,7 @@ export default function Response({
 }) {
   return (
     <Button>
-      <button onClick={() => setResponseValue(value)}>{title}</button>
+      <div onClick={() => setResponseValue(value)}>{title}</div>
     </Button>
   );
 }
