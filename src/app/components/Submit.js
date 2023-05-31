@@ -12,7 +12,7 @@ export default function Submit({ completedResponses }) {
       answers: completedResponses,
     };
     console.log("Completed Survey:", finalAnswers);
-    fetch("https://blueprint-api.vercel.app/post", {
+    fetch("http://localhost:2222/post", {
       method: "POST",
       headers: {
         Accept: "application/json",
