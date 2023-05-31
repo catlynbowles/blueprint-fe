@@ -1,6 +1,10 @@
-# 👣 Blueprint Diagnostic Screener 🔵
+# 👣 Blueprint Diagnostic Screener Frontend 🔵
 
-- [Deployed Link](https://blueprint-fe.vercel.app/)
+[Deployed](https://blueprint-fe.vercel.app/)
+
+
+https://github.com/catlynbowles/blueprint-fe/assets/98493391/751a28fd-10c0-4757-92c4-a4e4c2488d92
+
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -15,11 +19,14 @@
 The front-end portion of this take-home challenge was aimed at providing an easy tool to implementa patient survey used to provide valuable information to a patient's provider, and track their progress over time. 
 
 ## Planning
+[Linear Board](https://linear.app/kitty-catlyn/project/blueprint-survey-a43129818358/KIT)
+Used for planning and organizing FE & BE tasks
+
 [Figma Design](https://www.figma.com/file/cVVctrUwOEFuZs9Ycvm8TF/blueprint-bp?type=design&node-id=0-1&t=G3ctS8Nj4rkGjGHh-0)
 
 In order to effectively design and implement an effective UI covering the guidelines, I relied on Figma to develop wireframes covering the basic user flow. Using Blueprint's current website to inspire the design, I gathered hex values and mimicked the rounded displays from the current UI. 
 
-## Features / User Flow
+## Features
 - On the landing page, a user is given a brief introduction to the survey which will cover the basic purpose and functionality. Upon clicking 'Get Started' the user will be directed to the survey. 
 - The survey will display a series of prompts, along with an assortment of 5 preset responses as gathered from the API. As the user makes the selection, the application will track and record responses. 
 - As a user clicks through the survey, a progress bar will update with their current survey completion displayed. 
