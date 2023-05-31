@@ -11,6 +11,8 @@ export default function ProgressBar({ currentIndex }) {
         aria-valuenow={percentageComplete}
         aria-valuemin="0"
         aria-valuemax="100"
+        id="progressPercentage"
+        aria-label="Progress Bar"
       >
         <div
           className="bg-magenta rounded-full h-6 text-center text-white text-sm transition-all duration-700 opacity-80"

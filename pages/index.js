@@ -17,7 +17,7 @@ export default function Home() {
             question. You cannot return to previous questions, and please defer from refreshing the page during the survey. You will be
             notified upon completion."
           />
-          <Link href="screening">
+          <Link href="screening" aria-label="Begin the screening process.">
             <Button>Get Started</Button>
           </Link>
         </div>
