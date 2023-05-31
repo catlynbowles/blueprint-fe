@@ -37,10 +37,16 @@ export default function Submit({ completedResponses }) {
     <div className="flex flex-col gap-5 justify-center items-center">
       <InformationalLayout
         header="Thank you for completing Blueprint’s Diagnostic Screening"
-        text={error ? "We're having some difficulties submitting your survey. Please return home to resubmit your survey." :
-          "No further action is required from you at this time. We’ll see you again in a few weeks ! (For demo purposes, please look in the console for the proposed level two assesments from the API)"
+        text={
+          error
+            ? "We're having some difficulties submitting your survey. Please return home to resubmit your survey."
+            : "No further action is required from you at this time. We’ll see you again in a few weeks !"
         }
       />
+      <p>
+        ** For demo purposes, please look in the console for the proposed level
+        two assesments from the API **
+      </p>
       <Link href="/" onClick={() => clearResponses()}>
         <Button>Return Home</Button>
       </Link>
