@@ -1,4 +1,4 @@
-# 👣 Blueprint Diagnostic Screener Frontend 🔵
+# 👣 Diagnostic Screener Frontend 🔵
 
 [Deployed](https://blueprint-fe.vercel.app/)
 

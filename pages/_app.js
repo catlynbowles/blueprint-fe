@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Blueprint Diagnostic Screening</title>
+        <title>Diagnostic Screening</title>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
