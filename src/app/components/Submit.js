@@ -36,7 +36,7 @@ export default function Submit({ completedResponses }) {
   return (
     <div className="flex flex-col gap-5 justify-center items-center">
       <InformationalLayout
-        header="Thank you for completing Blueprint’s Diagnostic Screening"
+        header="Thank you for completing our Diagnostic Screening"
         text={
           error
             ? "We're having some difficulties submitting your survey. Please return home to resubmit your survey."
