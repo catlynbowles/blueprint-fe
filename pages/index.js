@@ -9,7 +9,7 @@ export default function Home() {
       <DialogBox>
         <div className="flex flex-col items-center justify-around text-center min-h-full">
           <InformationalLayout
-            header="Welcome to Blueprint Diagnostic Screening"
+            header="Welcome to Diagnostic Screening"
             text="This survey is confidential and will be used solely by your provider
             to make the most informed decisions about your care. Please answer
             the questions to the best of your ability, and keep in mind when you
